@@ -47,8 +47,8 @@ class TestSimpleMath(unittest.TestCase):
     def test_soustraction_floats(self):
         self.assertAlmostEqual(SimpleMath.soustraction(5.5, 2.2), 3.3, places=5)
 
-#def test_soustraction_large_numbers(self):
-    #  self.assertEqual(SimpleMath.soustraction(2_000_000_000, 1_000_000_000), 1_000_000_000)
+    def test_soustraction_large_numbers(self):
+        self.assertEqual(SimpleMath.soustraction(2_000_000_000, 1_000_000_000), 1_000_000_000)
 
 if __name__ == '__main__':
     unittest.main()
