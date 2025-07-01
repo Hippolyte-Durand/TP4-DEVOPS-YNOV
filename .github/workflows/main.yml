@@ -1,0 +1,21 @@
+name: Simple CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Cloner le repo
+      uses: actions/checkout@v3
+
+    - name: 📄 Afficher les fichiers
+      run: ls -la
+
+    - name: 🔧 Exemple de script
+      run: echo "Hello depuis GitHub Actions"
