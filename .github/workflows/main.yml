@@ -1,4 +1,6 @@
-name: Simple CI
+# .github/workflows/ci.yml
+
+name: Test Messages
 
 on:
   push:
@@ -6,15 +8,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  test-messages:
     runs-on: ubuntu-latest
-
     steps:
-    - name: 📥 Cloner le repo
-      uses: actions/checkout@v3
+      - name: Cloner le repo
+        uses: actions/checkout@v3
 
-    - name: 📄 Afficher les fichiers
-      run: ls -la
+      - name: Message 1
+        run: echo "✅ Étape 1 exécutée"
 
-    - name: 🔧 Exemple de script
-      run: echo "Hello depuis GitHub Actions"
+      - name: Message 2
+        run: echo "📦 Étape 2 terminée"
