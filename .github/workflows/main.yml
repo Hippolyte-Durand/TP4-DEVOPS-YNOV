@@ -1,6 +1,4 @@
-# .github/workflows/ci.yml
-
-name: Test Messages
+name: Run Python Unittests
 
 on:
   push:
@@ -8,14 +6,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-messages:
+  runnig-simpleMath:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Cloner le repo
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Message 1
-        run: echo "✅ Étape 1 exécutée"
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'  # Change selon ta version souhaitée
 
-      - name: Message 2
-        run: echo "📦 Étape 2 terminée"
+    - name: Run tests
+      run: python test_simplemath.py
