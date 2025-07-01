@@ -19,4 +19,4 @@ jobs:
         python-version: '3.11'  # Change selon ta version souhaitée
 
     - name: Run tests
-      run: python test_simplemath.py
+      run: python SimpleMath.py
